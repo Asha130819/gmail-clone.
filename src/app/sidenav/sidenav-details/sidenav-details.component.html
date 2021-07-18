@@ -1,0 +1,84 @@
+<div class="container">
+  
+    <mat-tab-group class="content-container mat-elevation-z8">
+      <mat-tab> 
+        <ng-template mat-tab-label>
+          <label class="tab1"><img src="assets\images\primary-logo.png"> Primary</label>
+        </ng-template>
+
+        <mat-card class="details-container" style="cursor: pointer;">
+          <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
+          <div class="cont" routerLink="template" >
+            <span class="content1" routerLink="template">{{data.name[0]}}</span>
+            <span class="content2"  routerLink="template">{{data.content[0]}}</span>
+            <span class="content3"><b>{{getTime(0)}}</b></span> 
+          </div> 
+      </mat-card>
+
+    <mat-card class="details-container" style="cursor: pointer;">
+      <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>   
+      <div class="cont" routerLink="template">
+        <span class="content1" routerLink="template">{{data.name[1]}}</span>
+        <span class="content2"  routerLink="template">{{data.content[1]}}</span>
+        <span class="content3"><b>{{getTime(1)}}</b></span> 
+      </div> 
+    </mat-card>
+
+    <mat-card class="details-container" style="cursor: pointer;">
+      <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>       
+      <div class="cont" routerLink="template">
+        <span class="content1" routerLink="template">{{data.name[2]}}</span>
+        <span class="content2"  routerLink="template">{{data.content[2]}}</span>
+        <span class="content3"><b>{{getTime(2)}}</b></span> 
+      </div> 
+    </mat-card> -->
+
+     </mat-tab>
+      <mat-tab label="Social"> 
+        <ng-template mat-tab-label>
+          <label class="tab2"><img src="assets\images\social-icon.png"> Social</label>
+        </ng-template>
+        <mat-card class="details-container" style="cursor: pointer;">
+          <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
+          <div class="cont" routerLink="template">
+            <span class="content1" routerLink="template">{{social.name[0]}}}</span>
+            <span class="content2"  routerLink="template">{{social.content[0]}}</span>
+            <span class="content3"><b>{{getTime(0)}}</b></span> 
+          </div> 
+      </mat-card>
+
+      <mat-card class="details-container" style="cursor: pointer;">
+        <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
+        <div class="cont" routerLink="template">
+          <span class="content1" routerLink="template">{{social.name[1]}}}</span>
+          <span class="content2"  routerLink="template">{{social.content[1]}}</span>
+          <span class="content3"><b>{{getTime(1)}}</b></span> 
+        </div> 
+    </mat-card>
+      </mat-tab>
+      <mat-tab> 
+        <ng-template mat-tab-label>
+          <label class="tab3"><img src="assets\images\promotions-logo.png"> Promotions</label>
+        </ng-template>
+        <mat-card class="details-container" style="cursor: pointer;">
+          <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
+          <div class="cont" routerLink="template">
+            <span class="content1" routerLink="template">{{promotions.name[0]}}</span>
+            <span class="content2"  routerLink="template">{{promotions.content[0]}}</span>
+            <span class="content3"><b>{{getTime(0)}}</b></span> 
+          </div> 
+      </mat-card>
+
+      <mat-card class="details-container" style="cursor: pointer;">
+        <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
+        <div class="cont" routerLink="template">
+          <span class="content1" routerLink="template">{{promotions.name[1]}}</span>
+          <span class="content2"  routerLink="template">{{promotions.content[1]}}</span>
+          <span class="content3"><b>{{getTime(1)}}</b></span> 
+        </div> 
+    </mat-card>
+      </mat-tab>
+    </mat-tab-group>
+
+
+</div>

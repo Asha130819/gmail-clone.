@@ -1,0 +1,16 @@
+.starred{
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    width: 93%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.container :hover{
+    background-color: lightgray;
+}

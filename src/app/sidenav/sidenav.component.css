@@ -1,0 +1,112 @@
+mat-toolbar{
+    width: 100%;
+    background-color: white;
+}
+
+button:hover{
+    background-color: white;
+}
+
+img{
+    padding-right: 70px;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+mat-icon {
+    margin-right: 8px;
+}
+
+.side-icons{
+    padding: 20px;
+}
+
+mat-icon:hover{
+    background-color: lightgray;
+}
+
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.subcontainer{
+    width: 350px;
+}
+
+.searchbox{
+    width: 500px;
+}
+
+.container{
+    height: calc(100vh - 65px);
+}
+
+.compose{
+    font-family: 'Google Sans', Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    border-radius: 24px;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding-bottom: 6px;
+    width: 150px;
+    height: 48px;
+    box-shadow: 0 1px 2px 0 ;
+    letter-spacing: .25px;
+    text-align:center;
+    background-color: white;
+}
+
+.compose-logo{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+
+.search-icon{
+    padding-top: 15px;
+    justify-content: flex-start;
+}
+
+.search-box{
+    justify-content: center;  
+}
+
+.matt{
+    width: 50%;
+    border-radius: 20px;
+    border: ipx solid lightgray;
+    font-weight: 400;
+    margin-top: 15px;
+    background-color: lightgray;
+}
+
+.matt:hover{
+    background-color: white;
+}
+
+
+

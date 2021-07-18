@@ -1,0 +1,102 @@
+<mat-toolbar fxFlex>
+
+  <button mat-icon-button class="nav-icon">
+    <mat-icon (click)="sidenav.toggle()" matTooltip="Main Menu">menu</mat-icon>
+  </button>
+
+  <img src="assets/images/logo-gmail.png" alt="gmail">
+  
+  <mat-form-field floatLabel="never" appearance="outline" class="matt">
+    <mat-icon class="search-icon" matPrefix>search</mat-icon>
+    <input type="text" matInput [formControl]="myControl" placeholder="Search mail" class="search-box">
+    <mat-icon class="filter-icon" matSuffix>filter_list</mat-icon>
+  </mat-form-field>
+
+  <div class="subcontainer"></div>
+
+    <mat-icon [matMenuTriggerFor]="supportMenu" matTooltip="support" class="side-icons">help_outline</mat-icon>
+    <mat-menu #supportMenu="matMenu">
+      <div mat-menu-item>Help</div>
+      <div mat-menu-item>Training</div>
+      <div mat-menu-item>Updates</div>
+    </mat-menu>
+
+
+    <mat-icon [matMenuTriggerFor]="settingMenu" matTooltip="settings" class="side-icons">settings</mat-icon>
+    <mat-menu #settingMenu>
+      <div>Quick settings</div>
+      <button mat-button color="primary">See all settings</button>
+    </mat-menu>
+
+    <mat-icon matTooltip="Google Maps" class="side-icons">apps</mat-icon>
+
+    <mat-icon [matMenuTriggerFor]="logoutMenu" matTooltip="Google account"class="side-icons">account_circle </mat-icon>
+    <mat-menu #logoutMenu="matMenu">
+
+      <mat-card>
+        <mat-icon>account_box</mat-icon>
+        Add another account
+      </mat-card>
+      <button mat-raised-button color="primary" style="margin-top: 10px;" routerLink="/">Logout</button>
+    </mat-menu>
+
+</mat-toolbar>
+
+
+<mat-sidenav-container class="container">
+    <mat-sidenav #sidenav role="navigation"  mode="side" class="mat-elevation-z8" opened="true">
+
+      <button class="compose" ><img src="assets\images\compose-logo.png" class="compose-logo"> Compose</button>
+
+        <button mat-button class="menu-button" routerLink="/home">
+            <mat-icon>inbox</mat-icon>
+            <span>Inbox</span>
+        </button>
+  
+        <button mat-button class="menu-button" routerLink="starred">
+            <mat-icon>starred</mat-icon>
+            <span>Starred</span>
+        </button>
+  
+        <button mat-button class="menu-button">
+            <mat-icon>send</mat-icon>
+            <span>Sent</span>
+        </button>
+  
+        <button mat-button class="menu-button">
+          <mat-icon>drafts</mat-icon>
+          <span>Drafts</span>
+        </button>
+  
+        <mat-divider></mat-divider>
+  
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+    </mat-sidenav>
+  
+    
+    <mat-sidenav-content>
+
+  <main>
+    <router-outlet></router-outlet> 
+  </main>
+
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+
+
+
+
+
+
+
+ 
+
+
+  
+
+

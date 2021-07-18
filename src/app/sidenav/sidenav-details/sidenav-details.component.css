@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-container {
+    height: calc(100vh - 98px);
+    width: calc(100vw - 280px);
+    display: flex;
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    color: lightgray;
+}
+
+.container{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.details-container{
+    display: flex;
+    justify-content:flex-start;
+}
+
+mat-tab, mat-card:hover{
+    background-color: lightgray;
+}
+
+.tab1{
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+}
+
+.tab2{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.tab3{
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+}
+
+.cont{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content1{
+    padding-left: 55px;
+    flex: 2;
+}
+
+.content2{
+    flex: 5;
+}
+
+.content3{
+    flex: 1;
+}
