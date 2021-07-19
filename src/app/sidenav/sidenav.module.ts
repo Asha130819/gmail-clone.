@@ -1,3 +1,4 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { Router } from "@angular/router";
@@ -15,7 +16,7 @@ import { StarredComponent } from "./starred/starred.component";
         SidenavComponent,
         StarredComponent,
     ],
-    imports: [ReactiveFormsModule,MaterialModule,AppRoutingModule]
+    imports: [CommonModule, ReactiveFormsModule,MaterialModule,AppRoutingModule]
 })
 export class sidenavModule{
 

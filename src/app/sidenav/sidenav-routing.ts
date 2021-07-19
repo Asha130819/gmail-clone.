@@ -8,8 +8,8 @@ import { StarredComponent } from "./starred/starred.component";
 const sidenavRoutes: Routes = [
     {path: "", component: SidenavComponent, children: [
         {path: '', component: SidenavDetailsComponent},
-        {path: "starred", component: StarredComponent},
-        {path: "template", component: SidenavTemplateComponent}
+        {path: ":name/re", component: StarredComponent},
+        {path: ":id", component: SidenavTemplateComponent}
     ]},
 ];
 @NgModule({

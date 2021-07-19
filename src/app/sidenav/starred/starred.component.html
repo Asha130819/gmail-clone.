@@ -1,5 +1,13 @@
 
-<main class="container">
-    <mat-card class="starred">Nothing have been starred yet!</mat-card>
+<main class="container" *ngIf="name=='starred'? true: false">
+    <mat-card class="starred">Nothing have been starred yet! ⭐</mat-card>
+</main>
+
+<main class="container" *ngIf="name=='sent'? true: false">
+    <mat-card class="starred">Nothing have been sent yet 🤷‍♂️</mat-card>
+</main>
+
+<main class="container" *ngIf="name=='drafts'? true: false">
+    <mat-card class="starred">Nothing have been drafted yet! 👀</mat-card>
 </main>
 
