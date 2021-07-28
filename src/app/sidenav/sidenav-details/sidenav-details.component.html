@@ -1,49 +1,45 @@
-<div class="container">
+<mat-tab-group class="content-container mat-elevation-z8">
 
-      <mat-tab-group class="content-container mat-elevation-z8">
+  <mat-tab> 
+    <ng-template mat-tab-label>
+      <label class="tab1"><img src="assets\images\primary-logo.png"> Primary</label>
+    </ng-template>
+    <mat-card class="details-container" style="cursor: pointer;" *ngFor="let data of primary; let i=index">
+      <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
+      <div class="cont" [routerLink]="[i]" >
+        <span class="content1">{{data.companyName}}</span>
+        <span class="content2">{{data.tagLine}}</span>
+        <span class="content3"><b>{{getTime(data.postTime)}}</b></span> 
+      </div> 
+  </mat-card>
+</mat-tab> 
 
-        <mat-tab> 
-          <ng-template mat-tab-label>
-            <label class="tab1"><img src="assets\images\primary-logo.png"> Primary</label>
-          </ng-template>
-          <mat-card class="details-container" style="cursor: pointer;" *ngFor="let data of primary; let i=index">
-            <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
-            <div class="cont" [routerLink]="[i]" >
-              <span class="content1">{{data.companyName}}</span>
-              <span class="content2">{{data.tagLine}}</span>
-              <span class="content3"><b>{{getTime(data.postTime)}}</b></span> 
-            </div> 
-        </mat-card>
-      </mat-tab> 
+<mat-tab> 
+  <ng-template mat-tab-label>
+    <label class="tab1"><img src="assets\images\social-icon.png"> Social</label>
+  </ng-template>
+  <mat-card class="details-container" style="cursor: pointer;" *ngFor="let data of social; let i =index">
+    <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
+    <div class="cont" [routerLink]="[i]">
+      <span class="content1">{{data.companyName}}</span>
+      <span class="content2">{{data.tagLine}}</span>
+      <span class="content3"><b>{{getTime(data.postTime)}}</b></span> 
+    </div> 
+</mat-card>
+ </mat-tab> 
 
-      <mat-tab> 
-        <ng-template mat-tab-label>
-          <label class="tab1"><img src="assets\images\social-icon.png"> Social</label>
-        </ng-template>
-        <mat-card class="details-container" style="cursor: pointer;" *ngFor="let data of social; let i =index">
-          <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
-          <div class="cont" [routerLink]="[i]">
-            <span class="content1">{{data.companyName}}</span>
-            <span class="content2">{{data.tagLine}}</span>
-            <span class="content3"><b>{{getTime(data.postTime)}}</b></span> 
-          </div> 
-      </mat-card>
-       </mat-tab> 
+ <mat-tab> 
+  <ng-template mat-tab-label>
+    <label class="tab1"><img src="assets\images\promotions-logo.png"> Promotion</label>
+  </ng-template>
+  <mat-card class="details-container" style="cursor: pointer;" *ngFor="let data of promotion; let i=index">
+    <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
+    <div class="cont" [routerLink]="[i]" >
+      <span class="content1">{{data.companyName}}</span>
+      <span class="content2">{{data.tagLine}}</span>
+      <span class="content3"><b>{{getTime(data.postTime)}}</b></span> 
+    </div> 
+</mat-card>
+ </mat-tab> 
 
-       <mat-tab> 
-        <ng-template mat-tab-label>
-          <label class="tab1"><img src="assets\images\promotions-logo.png"> Promotion</label>
-        </ng-template>
-        <mat-card class="details-container" style="cursor: pointer;" *ngFor="let data of promotion; let i=index">
-          <mat-checkbox class="example-margin" style="flex: 0;"></mat-checkbox>
-          <div class="cont" [routerLink]="[i]" >
-            <span class="content1">{{data.companyName}}</span>
-            <span class="content2">{{data.tagLine}}</span>
-            <span class="content3"><b>{{getTime(data.postTime)}}</b></span> 
-          </div> 
-      </mat-card>
-       </mat-tab> 
-
-      </mat-tab-group>
-  
-</div>
+</mat-tab-group>

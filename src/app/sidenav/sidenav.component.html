@@ -1,4 +1,4 @@
-<mat-toolbar fxFlex>
+<mat-toolbar>
 
   <button mat-icon-button class="nav-icon">
     <mat-icon (click)="sidenav.toggle()" matTooltip="Main Menu">menu</mat-icon>
@@ -43,8 +43,8 @@
 </mat-toolbar>
 
 
-<mat-sidenav-container class="container">
-    <mat-sidenav #sidenav role="navigation"  mode="side" class="mat-elevation-z8" opened="true">
+<mat-sidenav-container fxLayout="row" fxLayoutGap="10px">
+    <mat-sidenav #sidenav role="navigation"  mode="side" class="mat-elevation-z8" fxFlex="30">
 
       <button class="compose" ><img src="assets\images\compose-logo.png" class="compose-logo"> Compose</button>
 
@@ -76,14 +76,11 @@
         </button>
     </mat-sidenav>
   
+  
+      <mat-sidenav-content fxFlex="90">
+        <router-outlet></router-outlet> 
+        </mat-sidenav-content>
     
-    <mat-sidenav-content>
-
-  <main>
-    <router-outlet></router-outlet> 
-  </main>
-
-    </mat-sidenav-content>
 
   </mat-sidenav-container>
 

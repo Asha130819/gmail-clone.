@@ -3,13 +3,12 @@
 	
 }
 .ng-serve-card{
-    justify-content: space-around;
 	margin: 50px auto;
 	width:355px;
-	height:280px;
+	height:355px;;
     padding:  4%;
     padding-right: 0%;
 	background:#fffefe;
 	/* border: 1px solid rgb(150, 150, 150); */
-	/* box-shadow: 0px 1px 1px 1px #c6c1c1; */
+	box-shadow: 3px 3px 3px 4px #c6c1c1;
 }
