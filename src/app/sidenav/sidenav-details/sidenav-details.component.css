@@ -1,7 +1,6 @@
 .content-container {
-    height: calc(100vh - 98px);
-    width: calc(100vw - 280px);
-    display: flex;
+    /* height: calc(100vh - 98px);
+    width: calc(100vw - 280px); */
     border-radius: 10px;
     margin: 16px;
     margin-left: 32px;
@@ -10,7 +9,6 @@
 
 .details-container{
     display: flex;
-    justify-content:flex-start;
 }
 
 mat-tab, mat-card:hover{
