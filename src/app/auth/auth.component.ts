@@ -27,4 +27,8 @@ export class AuthComponent implements OnInit {
     }
   }
 
+  public checkError = (controlName: string, errorName: string) => {
+    return this.loginForm.controls[controlName].hasError(errorName);
+  }
+
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { ComposeDialogComponent } from './compose-dialog/compose-dialog.component';
+
 
 @Component({
   selector: 'app-sidenav',
@@ -14,7 +16,11 @@ export class SidenavComponent{
         this.myControl = new FormControl(null)
     }
 
-  constructor(private router: Router) {}
+  constructor(public dialog: MatDialog) {}
 
+
+  openCompose(){
+    this.dialog.open(ComposeDialogComponent);
+  }
 
 }
