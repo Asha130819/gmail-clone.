@@ -8,6 +8,7 @@ import { SidenavDetailsComponent } from "./sidenav-details/sidenav-details.compo
 import { SidenavTemplateComponent } from "./sidenav-details/sidenav-template/sidenav-template.component";
 import { SidenavComponent } from "./sidenav.component";
 import { StarredComponent } from "./starred/starred.component";
+import { ComposeDialogComponent } from './compose-dialog/compose-dialog.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,9 @@ import { StarredComponent } from "./starred/starred.component";
         SidenavTemplateComponent,
         SidenavComponent,
         StarredComponent,
+        ComposeDialogComponent,
     ],
+    entryComponents: [ComposeDialogComponent],
     imports: [CommonModule, ReactiveFormsModule,MaterialModule,AppRoutingModule]
 })
 export class sidenavModule{

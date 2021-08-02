@@ -1,9 +1,6 @@
 {
-  "database": {
-    "rules": "database.rules.json"
-  },
   "hosting": {
-    "public": "dist/gmail-clone",
+    "public": "dist\\gmail-clone",
     "ignore": [
       "firebase.json",
       "**/.*",

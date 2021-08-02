@@ -1,8 +1,5 @@
-<div class="container-fluid">
-
-    <div class="row">
-      <div class="col-xs-12">
-        <mat-card class="ng-serve-card">
+<div class="container" fxLayout>
+        <mat-card class="ng-serve-card" >
           <div id="logo">
             <img
               src="assets\images\logo-gmail.png"
@@ -14,6 +11,7 @@
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <mat-form-field>
               <input matInput formControlName="login" placeholder="Login" />
+              <mat-error *ngIf="checkError('login', 'email')">Enter Valid Email</mat-error>
             </mat-form-field>
   
             <mat-form-field>
@@ -28,7 +26,5 @@
             <button mat-raised-button color="primary" type="submit">Login</button>
           </form>
         </mat-card>
-      </div>
-    </div>
   </div>
   

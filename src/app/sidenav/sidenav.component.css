@@ -18,6 +18,7 @@ mat-sidenav {
     border-radius: 10px;
     padding: 16px;
     text-align: center;
+    
 }
 
 
@@ -30,7 +31,7 @@ mat-sidenav-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 mat-icon {
     margin-right: 8px;
@@ -51,7 +52,7 @@ mat-divider {
 }
 
 .subcontainer{
-    width: 350px;
+    flex: 1 1 auto;
 }
 
 .searchbox{
@@ -66,7 +67,7 @@ mat-divider {
 
 .compose{
     font-family: 'Google Sans', Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    font-size: .875rem;
+    font-size: 1.5rem;
     font-weight: 500;
     border-radius: 24px;
     padding: 0;

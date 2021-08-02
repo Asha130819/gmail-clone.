@@ -13,7 +13,7 @@ import { sidenavModule } from './sidenav/sidenav.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
