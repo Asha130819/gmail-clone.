@@ -1,23 +1,52 @@
-.composeBox{
-    height: 500px;
-    width: 500px;
+.card{
+    position: fixed;
+    top: 40%;
+    right: 5%;
+    left: 60%;;
+    max-width: 37%;
+    max-height: 750px;
+    z-index: 100;
+    box-shadow: 3px 3px 3px 4px #c6c1c1;
 }
 
-.toolbar{
-    height: 8%;
-    background-color: black;
+.content{
+    height: 410px;
+}
+
+h2{
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
-.spacer{
-    flex: 1 1 auto;
+mat-form-field{
+    width: 98%;
+    margin-left: 10px;
+}
+
+mat-card{
+    padding: 0;
+    border-radius: 10px;
+}
+
+mat-card-header{
+    background-color: black;
+    height: 35px;
 }
 
 button{
-    background-color: blue;
+    margin: 10px;
+    margin-bottom: 0;
 }
 
-mat-icon :hover{
-    background-color: white
+mat-icon{
+    color: grey;
 }
+
+mat-icon:hover{
+    background-color: white;
+}
+
+.spacer{
+    flex: 1 1 0;
+}
+

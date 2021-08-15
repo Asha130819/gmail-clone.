@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { ComposeDialogComponent } from './compose-dialog/compose-dialog.component';
+import { Subject } from 'rxjs';
+import { DataStorageService } from '../shared/data-storage.service';
 
 
 @Component({
@@ -11,16 +12,24 @@ import { ComposeDialogComponent } from './compose-dialog/compose-dialog.componen
 })
 export class SidenavComponent{
   myControl!: FormControl;
+  userEmail!: string;
+
+  constructor(private dataStorage: DataStorageService,public dialog: MatDialog){}
+
+  compose = false;
 
     ngOnInit(){
-        this.myControl = new FormControl(null)
+        this.myControl = new FormControl(null);
+        this.dataStorage.user.subscribe(user => {
+          console.log(user);
+          console.log(user);
+          this.userEmail = user.email;
+          console.log(this.userEmail);
+        })
     }
 
-  constructor(public dialog: MatDialog) {}
-
-
   openCompose(){
-    this.dialog.open(ComposeDialogComponent);
+    this.compose=!this.compose;
   }
 
 }

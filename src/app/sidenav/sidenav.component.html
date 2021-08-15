@@ -39,6 +39,7 @@
         <mat-icon>account_box</mat-icon>
         Add another account
       </mat-card>
+      <h2>{{userEmail}}</h2>
       <button mat-raised-button color="primary" style="margin-top: 10px;" routerLink="/">Logout</button>
     </mat-menu>
 
@@ -87,9 +88,12 @@
   
       <mat-sidenav-content fxFlex="95">
         <router-outlet></router-outlet> 
+        <div  *ngIf="compose">
+          <app-compose-dialog></app-compose-dialog>
+        </div>
       </mat-sidenav-content>
-    
 
+      
   </mat-sidenav-container>
 
 

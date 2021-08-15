@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthResponseData, DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,26 +11,61 @@ import { Router } from '@angular/router';
 })
 export class AuthComponent implements OnInit {
 
-  loginForm!: FormGroup;
-  isLoginMode!: false;
+  yourForm!: FormGroup;
+  isLoginMode= true;
+  error= null;
+  hide=true;
 
-  constructor(private router: Router){}
+  obsSub!: Observable<AuthResponseData>;
+
+  constructor(private router: Router, private authService: DataStorageService){}
 
   ngOnInit(){
-    this.loginForm = new FormGroup({
+    this.yourForm = new FormGroup({
+      'firstname': new FormControl(null),
+      'lastname': new FormControl(null),
       'login': new FormControl(null, [Validators.required, Validators.email]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(6)])
     });
   }
 
-  onSubmit(){
-    if(this.loginForm.valid){
-      this.router.navigate(["/home"]);
-    }
+  switchMode(){
+    this.isLoginMode = !this.isLoginMode;
   }
 
-  public checkError = (controlName: string, errorName: string) => {
-    return this.loginForm.controls[controlName].hasError(errorName);
-  }
+  onSubmit(){
+    if(!this.yourForm.valid){
+      return;
+    }
+
+    const email = this.yourForm.value.login;
+    const password = this.yourForm.value.password;
+    const firstName = this.yourForm.value.firstname;
+    const lastName = this.yourForm.value.lastname;
+
+    if(this.isLoginMode){
+      this.obsSub = this.authService.login(email, password);
+    }else{
+      this.obsSub = this.authService.signup(email, firstName, lastName, password);
+    }
+
+    this.obsSub.subscribe(resData => {
+      console.log(resData);
+      this.router.navigate(["/home"]); 
+    }, errorMessage => {
+      console.log(errorMessage);
+      this.error = errorMessage;
+    })
+    
+    console.log(this.yourForm);  
+
+}
+
+  
+  public checkError (controlName: string, errorName: string) {
+      return this.yourForm.controls[controlName].hasError(errorName)? this.error: '';
+    }
+
+  
 
 }

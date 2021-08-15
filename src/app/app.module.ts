@@ -9,11 +9,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { SidenavRouting } from './sidenav/sidenav-routing';
 import { sidenavModule } from './sidenav/sidenav.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +21,7 @@ import { sidenavModule } from './sidenav/sidenav.module';
     ReactiveFormsModule,
     MaterialModule,
     AppRoutingModule,
+    AuthModule,
     sidenavModule,
     SidenavRouting
   ],
