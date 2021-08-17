@@ -18,7 +18,7 @@ import { ComposeDialogComponent } from './compose-dialog/compose-dialog.componen
         StarredComponent,
         ComposeDialogComponent,
     ],
-    entryComponents: [ComposeDialogComponent],
+    // entryComponents: [ComposeDialogComponent],
     imports: [CommonModule, ReactiveFormsModule,MaterialModule,AppRoutingModule]
 })
 export class sidenavModule{

@@ -87,9 +87,12 @@
   
       <mat-sidenav-content fxFlex="95">
         <router-outlet></router-outlet> 
+        <div  *ngIf="compose">
+          <app-compose-dialog></app-compose-dialog>
+        </div>
       </mat-sidenav-content>
-    
 
+      
   </mat-sidenav-container>
 
 
