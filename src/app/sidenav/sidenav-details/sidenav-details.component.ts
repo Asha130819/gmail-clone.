@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SidenavComponent } from '../sidenav.component';
 import { SidenavService } from '../sidenav.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class SidenavDetailsComponent implements OnInit {
   social = this.sidenavService.social;
   promotion = this.sidenavService.promotion;
 
-  constructor(private sidenavService: SidenavService, private router: Router){}
+  constructor(private sidenavService: SidenavService, private router: Router, private sidenavComponent: SidenavComponent){}
 
   ngOnInit(): void {
   }
