@@ -10,6 +10,7 @@ import { SidenavRouting } from './sidenav/sidenav-routing.module';
 import { sidenavModule } from './sidenav/sidenav.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     AuthModule,
     sidenavModule,
-    SidenavRouting
+    SidenavRouting,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
